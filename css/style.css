@@ -1,0 +1,74 @@
+/****@font-face{
+    font-family: 'QuicksandBook';
+    src: url('fonts/Quicksand_Book-webfont.eot');
+    src: url('fonts/Quicksand_Book-webfont.eot#iefix') format('embedded-opentype'),
+    url('fonts/Quicksand_Book-webfont.woff') format('woff'),     
+    url('fonts/Quicksand_Book-webfont.ttf') format('truetype'),     
+    url('fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} *****/
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    align-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.3rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+header{
+    background-color: white;
+    padding: 0px;
+    position: relative;
+    z-index: 50;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom: 3px outset #cd987f;
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+ul{
+    padding-left:100px;
+    list-style-type:none;
+    word-spacing: 10px;
+}
+
+li{
+    display: inline;
+    text-transform: uppercase;
+}
+
+ul li a{
+    text-decoration: none;
+    padding: 8px;
+    color: #999898;
+}
+
+ul li a:hover{
+    color:#cd987f;
+}
+
+ul li:last-of-type{
+    float: right;
+    padding-right: 130px;
+    text-transform: capitalize;
+    word-spacing: 3px;
+}
+
+.showcase-area{
+    box-sizing: border-box;
+    
+}
+
+img[src="showcase"]{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
