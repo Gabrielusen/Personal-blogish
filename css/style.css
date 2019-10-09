@@ -9,6 +9,11 @@
     font-style: normal;
 } *****/
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 html{
     box-sizing: border-box;
 }
@@ -28,9 +33,9 @@ header{
     z-index: 50;
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
-    border-bottom: 3px outset #cd987f;
-    padding-top: 7px;
-    padding-bottom: 10px;
+    /**border-bottom: 3px outset #cd987f;**/
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 ul{
@@ -47,11 +52,12 @@ li{
 ul li a{
     text-decoration: none;
     padding: 8px;
-    color: #999898;
+    color: black;
 }
 
 ul li a:hover{
     color:#cd987f;
+    text-decoration-line: underline;
 }
 
 ul li:last-of-type{
@@ -61,14 +67,38 @@ ul li:last-of-type{
     word-spacing: 3px;
 }
 
-.showcase-area{
+.showcase{
     box-sizing: border-box;
-    
+    width:100%;
+    height:80vh;
+    position: relative;
+    background: url('../images/showcase.jpg') no-repeat center center/cover;
+    background-position: left bottom;
+    background-size: 90rem;
 }
 
-img[src="showcase"]{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50vh;
+.showcase-area{
+    position: absolute;
+    height: 50px;
+    top:10%;
+    left:8%;
+}
+
+h1, p{
+    color:white;
+}
+
+p.description, p.format{
+    width:80%;
+    padding-top: 20px;
+}
+
+.name{
+    margin-top: 5rem;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    word-spacing: 0.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 50px;
 }
