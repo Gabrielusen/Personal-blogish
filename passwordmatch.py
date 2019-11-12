@@ -16,3 +16,5 @@ def check_password(text):
 while True:
     pw = input('Enter your password: ')
     print(check_password(pw))
+    if check_password(pw) == "strong password":
+        break
