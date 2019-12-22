@@ -77,11 +77,23 @@ ul li:last-of-type{
     background-size: 90rem;
 }
 
+.showcase::after{
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120 -100 250px #000000;
+}
+
 .showcase-area{
     position: absolute;
     height: 50px;
     top:10%;
-    left:8%;
+    left: 8%;
+    z-index: 2;
 }
 
 h1, p{
