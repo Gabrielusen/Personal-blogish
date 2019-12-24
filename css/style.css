@@ -114,3 +114,13 @@ p.description, p.format{
     letter-spacing: 0.3rem;
     font-weight: 20px;
 }
+
+div[class="container"]{
+    padding-top:30px;
+    padding-left:7rem;
+}
+
+img[src="images/gab1.jpg"]{
+    border:1px solid #cd987f;
+    border-radius: 500px;
+}
