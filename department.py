@@ -1,8 +1,19 @@
-import socket   # Imports the attributes of the socket module
-Hostname = ' '  # Defines the host name/IP address of the server.
+from collections import KeysView, ItemsView, ValuesView
 
-PortNumber = 22222  # Defines a dedicated port number for the server
-Buffer = 1024       # Defines the maximum size of data that can be exchanged
-ServerAddress = (Hostname, PortNumber)  # Defines the address of the server
-Server_Socket = socket.SOCK_STREAM    # Creates a stream #socket for the server
-Server_Socket.bind(ServerAddress)     # Binds the server address to #the server socket
+
+class DictSorted(dict):
+    def __new__(cls, *args, **kwargs):
+        new_dict = dict.__new__(*args, **kwargs)
+        new_dict.ordered_keys = []
+        return new_dict
+
+    def __setitem__(self, key, value):
+        """self[key] = value syntax"""
+        if key not in self.ordered_keys:
+            self.ordered_keys.append(key)
+        super().__setitem__(key, value)
+
+    def setdefault(self, key, value):
+        if key not in self.ordered_keys:
+            self.ordered_keys.append(key)
+
