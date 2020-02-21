@@ -207,4 +207,8 @@ fabric.properties
 pyvenv.cfg
 .venv/
 pip-selfcheck.json
-
+/ .idea /
+/ venv /
+department.py
+manage.py
+tmp.txt
