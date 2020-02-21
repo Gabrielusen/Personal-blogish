@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'product.apps.ProductConfig',  # new
+    'product.apps.ProductConfig',  # added personally
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'griffinshop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # new
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # added personally
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
