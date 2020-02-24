@@ -1,8 +1,15 @@
 from django.db import models
+from datetime import datetime, timezone
 
 
 class Post(models.Model):
-    text = models.TextField()
+    title = models.CharField(max_length=200)
+    author = models.ForeignKey(
+        'auth.User',
+        on_delete=models.CASCADE,
+    )
+    body = models.TextField()
+    time = models.DateTimeField(default=datetime.now())
 
     def __str__(self):
-        return self.text[:50]
+        return f"{self.title}"
