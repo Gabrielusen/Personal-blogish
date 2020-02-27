@@ -1,14 +1,9 @@
 {% extends 'base.html' %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
 {% block content %}
     {% for post in object_list %}
-        <h4>{{post.text}}</h4>
+        <div class="post-entry">
+            <h2><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h2>
+            <p>{{post.message}}</p>
+        </div>
     {% endfor %}
-{% endblock %}
-</body>
-</html>
+{% endblock content %}
