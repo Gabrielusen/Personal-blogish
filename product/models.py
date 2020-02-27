@@ -1,15 +1,10 @@
 from django.db import models
-from datetime import datetime, timezone
+#   from datetime import datetime
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
-    author = models.ForeignKey(
-        'auth.User',
-        on_delete=models.CASCADE,
-    )
-    body = models.TextField()
-    time = models.DateTimeField(default=datetime.now())
+    text = models.CharField(max_length=250)
+    message = models.TextField(max_length=255, default="")
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.text}"
